@@ -43,7 +43,10 @@ def recursiveBacktracking(currentState, destinyState, validTransitions, currentP
 def findAllPaths(currentState, destinyState, validTransitions, currentPath, max_prof, numberOfStates, numberOfTests, totalPathsFix):
     """
     Encontra todos os caminhos possíveis de um estado atual para um estado de destino.
-
+    
+    Obs: Não consegui fazer de uma forma que a função retorne diretamente o número de caminhos encontrados. Precisei criar uma lista para armazenar os caminhos encontrados, pois
+    eles eventualmente duplicavam, por isso precisei fazer a verificação se o caminho já estava na lista antes de adicionar. Essa falha provalvemente acarreta num maior consumo de memória.
+    
     Args:
         currentState (int): Estado atual.
         destinyState (int): Estado de destino.
